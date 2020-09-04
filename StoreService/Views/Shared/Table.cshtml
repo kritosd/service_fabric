@@ -1,0 +1,36 @@
+﻿
+@model tableStructure
+@{
+    ViewData["Title"] = "Table";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Table</h2>
+<p>
+    @Html.ActionLink("Create New", "Table/{id}/Createfield", new { id = Model.id })
+</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Add Fields</legend>
+        <button type="button" name="add" id="add" class="btn btn-success">Add More</button>
+        @foreach (var field in Model.fields)
+        {
+            @Html.HiddenFor(model => model.id)
+
+            <div class="form-group">
+                @Html.LabelFor(Model => field, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => field, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => field, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        }
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+    </fieldset>
+}

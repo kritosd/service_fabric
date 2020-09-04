@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="AppType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="Camunda_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="OcelotApiGw_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="OcelotApiGw_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="StoreService_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="StoreService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="API.WeatherService_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="API.WeatherService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="CamundaService_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="CamundaService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="SMSService.API_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="SMSService.API_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="Gateway_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="Gateway_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="EmailService.API_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="EmailService.API_InstanceCount" DefaultValue="-1" />
+  </Parameters>
+  <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
+       should match the Name and Version attributes of the ServiceManifest element defined in the 
+       ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CamundaPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="OcelotApiGwPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[OcelotApiGw_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="StoreServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[StoreService_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="API.WeatherServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[API.WeatherService_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CamundaServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[CamundaService_ASPNETCORE_ENVIRONMENT]" />
+      <EnvironmentVariable Name="Host" Value="localhost" />
+      <EnvironmentVariable Name="HttpGatewayPort" Value="8178" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="SMSService.APIPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[SMSService.API_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="GatewayPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[Gateway_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="EmailService.APIPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[EmailService.API_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <DefaultServices>
+    <!-- The section below creates instances of service types, when an instance of this 
+         application type is created. You can also create one or more instances of service type using the 
+         ServiceFabric PowerShell module.
+         
+         The attribute ServiceTypeName below must match the name defined in the imported ServiceManifest.xml file. -->
+    <Service Name="Camunda" ServiceDnsName="Camunda.app" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="CamundaType" InstanceCount="[Camunda_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="OcelotApiGw" ServiceDnsName="Gateway.app" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="OcelotApiGwType" InstanceCount="[OcelotApiGw_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="StoreService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="StoreServiceType" InstanceCount="[StoreService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="API.WeatherService" ServiceDnsName="WeatherService.app" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="API.WeatherServiceType" InstanceCount="[API.WeatherService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="CamundaService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="CamundaServiceType" InstanceCount="[CamundaService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="SMSService.API" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="SMSService.APIType" InstanceCount="[SMSService.API_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="Gateway" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="GatewayType" InstanceCount="[Gateway_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="EmailService.API" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="EmailService.APIType" InstanceCount="[EmailService.API_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+  </DefaultServices>
+</ApplicationManifest>

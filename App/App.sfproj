@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets=";ValidateMSBuildFiles">
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>2d9ddd29-8cd9-4ba9-a454-f5ced59d3c06</ProjectGuid>
+    <ProjectVersion>2.4</ProjectVersion>
+    <MinToolsVersion>1.5</MinToolsVersion>
+    <SupportedMSBuildNuGetPackageVersion>1.6.7</SupportedMSBuildNuGetPackageVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApplicationPackageRoot\ApplicationManifest.xml" />
+    <None Include="ApplicationParameters\Cloud.xml" />
+    <None Include="ApplicationParameters\Local.1Node.xml" />
+    <None Include="ApplicationParameters\Local.5Node.xml" />
+    <None Include="PublishProfiles\Cloud.xml" />
+    <None Include="PublishProfiles\Local.1Node.xml" />
+    <None Include="PublishProfiles\Local.5Node.xml" />
+    <None Include="Scripts\Deploy-FabricApplication.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\classes\application.yaml" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\classes\org\camunda\bpm\getstarted\loan_approval_spring_boot\App.class" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\classes\org\camunda\bpm\getstarted\loan_approval_spring_boot\config\CamundaSecurityFilter.class" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\classes\org\camunda\bpm\getstarted\loan_approval_spring_boot\WebappExampleProcessApplication.class" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\attach.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\awt.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\bci.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\dcpr.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\decora_sse.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\deploy.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\dtplugin\deployJava1.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\dtplugin\npdeployJava1.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\dt_shmem.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\dt_socket.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\eula.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\fontmanager.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\fxplugins.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\glass.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\glib-lite.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\gstreamer-lite.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\hprof.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\instrument.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\j2pcsc.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\j2pkcs11.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jaas_nt.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jabswitch.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\java-rmi.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\java.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\java.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\JavaAccessBridge-64.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javacpl.cpl" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javacpl.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javafx_font.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javafx_font_t2k.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javafx_iio.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javaw.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\javaws.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\java_crw_demo.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jawt.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\JAWTAccessBridge-64.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jdwp.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jfr.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jfxmedia.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jfxwebkit.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jjs.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jli.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jp2iexp.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jp2launcher.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jp2native.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jp2ssv.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jpeg.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jsdt.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jsound.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\jsoundds.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\kcms.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\keytool.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\kinit.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\klist.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\ktab.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\lcms.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\management.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\mlib_image.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\msvcp120.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\msvcr100.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\msvcr120.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\net.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\nio.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\npt.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\orbd.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\pack200.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\plugin2\msvcr100.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\plugin2\npjp2.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\policytool.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\prism_common.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\prism_d3d.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\prism_sw.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\resource.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\rmid.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\rmiregistry.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\sawindbg.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\servertool.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\server\classes.jsa" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\server\jvm.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\server\Xusage.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\splashscreen.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\ssv.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\ssvagent.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\sunec.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\sunmscapi.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\t2k.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\tnameserv.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\unpack.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\unpack200.exe" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\verify.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\w2k_lsa_auth.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\WindowsAccessBridge-64.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\wsdetect.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\bin\zip.dll" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\COPYRIGHT" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\accessibility.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\amd64\jvm.cfg" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\calendars.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\charsets.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\classlist" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\cmm\CIEXYZ.pf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\cmm\GRAY.pf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\cmm\LINEAR_RGB.pf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\cmm\PYCC.pf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\cmm\sRGB.pf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\content-types.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\currency.data" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\ffjcext.zip" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_de.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_es.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_fr.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_it.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_ja.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_ko.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_pt_BR.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_sv.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_zh_CN.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_zh_HK.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\messages_zh_TW.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\splash.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\splash@2x.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\splash_11-lic.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\deploy\splash_11@2x-lic.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\access-bridge-64.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\cldrdata.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\dnsns.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\jaccess.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\jfxrt.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\localedata.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\meta-index" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\nashorn.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\sunec.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\sunjce_provider.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\sunmscapi.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\sunpkcs11.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\ext\zipfs.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\flavormap.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fontconfig.bfc" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fontconfig.properties.src" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaBrightDemiBold.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaBrightDemiItalic.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaBrightItalic.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaBrightRegular.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaSansDemiBold.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaSansRegular.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaTypewriterBold.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\fonts\LucidaTypewriterRegular.ttf" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\hijrah-config-umalqura.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\cursors.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\invalid32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_CopyDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_CopyNoDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_LinkDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_LinkNoDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_MoveDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\images\cursors\win32_MoveNoDrop32x32.gif" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\javafx.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\javaws.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jce.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jfr.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jfr\default.jfc" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jfr\profile.jfc" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jfxswt.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jsse.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\jvm.hprof.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\logging.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\management-agent.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\management\jmxremote.access" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\management\jmxremote.password.template" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\management\management.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\management\snmp.acl.template" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\meta-index" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\net.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\plugin.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\psfont.properties.ja" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\psfontj2d.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\resources.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\rt.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\blacklist" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\blacklisted.certs" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\cacerts" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\java.policy" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\java.security" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\javaws.policy" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\local_policy.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\trusted.libraries" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\security\US_export_policy.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\sound.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\tzdb.dat" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\tzmappings" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\LICENSE" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\README.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\THIRDPARTYLICENSEREADME-JAVAFX.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\THIRDPARTYLICENSEREADME.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\jre\Welcome.html" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\loan-approval-spring-boot-0.0.1-SNAPSHOT.jar" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\loan-approval-spring-boot-0.0.1-SNAPSHOT.jar.original" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\maven-archiver\pom.properties" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\maven-status\maven-compiler-plugin\testCompile\default-testCompile\createdFiles.lst" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\maven-status\maven-compiler-plugin\testCompile\default-testCompile\inputFiles.lst" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\surefire-reports\org.camunda.bpm.getstarted.loan_approval_spring_boot.AppTest.txt" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\surefire-reports\TEST-org.camunda.bpm.getstarted.loan_approval_spring_boot.AppTest.xml" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Code\test-classes\org\camunda\bpm\getstarted\loan_approval_spring_boot\AppTest.class" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\Config\Settings.xml" />
+    <Content Include="ApplicationPackageRoot\CamundaPkg\ServiceManifest.xml" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.WeatherService\API.WeatherService.csproj" />
+    <ProjectReference Include="..\CamundaService\CamundaService.csproj" />
+    <ProjectReference Include="..\EmailService.API\EmailService.API.csproj" />
+    <ProjectReference Include="..\Gateway\Gateway.csproj" />
+    <ProjectReference Include="..\OcelotApiGw\OcelotApiGw.csproj" />
+    <ProjectReference Include="..\SMSService.API\SMSService.API.csproj" />
+    <ProjectReference Include="..\StoreService\StoreService.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationPackageRoot\CamundaPkg\Code\jre\lib\applet\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <PropertyGroup>
+    <ApplicationProjectTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets</ApplicationProjectTargetsPath>
+  </PropertyGroup>
+  <Import Project="$(ApplicationProjectTargetsPath)" Condition="Exists('$(ApplicationProjectTargetsPath)')" />
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" />
+  <Target Name="ValidateMSBuildFiles">
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" Text="Unable to find the '..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" Text="Unable to find the '..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
+  </Target>
+</Project>

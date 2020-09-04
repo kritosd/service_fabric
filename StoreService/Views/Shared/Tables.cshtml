@@ -1,0 +1,54 @@
+﻿
+@model IEnumerable<tableStructure>
+@{
+    ViewData["Title"] = "Tables";
+}
+
+<h2>Tables</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@foreach (tableStructure table in Model)
+{
+    <h3>
+        @Html.DisplayFor(modelItem => table.id)
+    </h3>
+    @Html.ActionLink("Edit", "Table", new { id = table.id })
+    <table class="table">
+        <thead>
+            @foreach (var row in table.rows)
+            {
+                <tr>
+                    @foreach (var r in row)
+                    {
+                        <th>
+                            @Html.DisplayFor(modelItem => r.Key)
+                        </th>
+                    }
+                    <th></th>
+                </tr>
+                break;
+            }
+        </thead>
+        <tbody>
+            @foreach (var row in table.rows)
+            {
+                <tr>
+                    @foreach (var r in row)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => r.Value)
+                        </td>
+                    }
+                    <td>
+                        @Html.ActionLink("Edit", "Table", new { /*id = item.PrimaryKey*/ })
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

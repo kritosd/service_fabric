@@ -1,0 +1,17 @@
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.csproj.CoreCompileInputs.cache
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.AssemblyInfoInputs.cache
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.AssemblyInfo.cs
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\hostpolicy.dll
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\hostfxr.dll
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.exe
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.deps.json
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.runtimeconfig.json
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.runtimeconfig.dev.json
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.dll
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.csprojAssemblyReference.cache
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.RazorAssemblyInfo.cache
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.RazorAssemblyInfo.cs
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.RazorTargetAssemblyInfo.cache
+D:\sw\App\SMSService.API\bin\Debug\netcoreapp2.1\win7-x64\SMSService.API.pdb
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.dll
+D:\sw\App\SMSService.API\obj\Debug\netcoreapp2.1\win7-x64\SMSService.API.pdb

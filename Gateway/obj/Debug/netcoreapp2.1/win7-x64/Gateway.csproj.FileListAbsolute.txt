@@ -1,0 +1,17 @@
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.csproj.CoreCompileInputs.cache
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.AssemblyInfoInputs.cache
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.AssemblyInfo.cs
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\hostpolicy.dll
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\hostfxr.dll
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.exe
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.deps.json
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.runtimeconfig.json
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.runtimeconfig.dev.json
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.dll
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.csprojAssemblyReference.cache
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.RazorAssemblyInfo.cache
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.RazorAssemblyInfo.cs
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.RazorTargetAssemblyInfo.cache
+D:\sw\App\Gateway\bin\Debug\netcoreapp2.1\win7-x64\Gateway.pdb
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.dll
+D:\sw\App\Gateway\obj\Debug\netcoreapp2.1\win7-x64\Gateway.pdb

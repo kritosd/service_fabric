@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/App" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="Camunda_InstanceCount" Value="-1" />
+    <Parameter Name="OcelotApiGw_InstanceCount" Value="-1" />
+    <Parameter Name="StoreService_InstanceCount" Value="-1" />
+    <Parameter Name="API.WeatherService_InstanceCount" Value="-1" />
+    <Parameter Name="CamundaService_InstanceCount" Value="-1" />
+    <Parameter Name="SMSService.API_InstanceCount" Value="-1" />
+    <Parameter Name="Gateway_InstanceCount" Value="-1" />
+    <Parameter Name="EmailService.API_InstanceCount" Value="-1" />
+  </Parameters>
+</Application>

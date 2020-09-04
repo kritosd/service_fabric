@@ -1,0 +1,1 @@
+{"ReRoutes":[],"Aggregates":[],"GlobalConfiguration":{"RequestIdKey":"OcRequestId","ServiceDiscoveryProvider":{"Host":"localhost","Port":19081,"Type":"ServiceFabric"},"RateLimitOptions":{"ClientIdHeader":"ClientId","QuotaExceededMessage":null,"RateLimitCounterPrefix":"ocelot","DisableRateLimitHeaders":false,"HttpStatusCode":429},"BaseUrl":null}}

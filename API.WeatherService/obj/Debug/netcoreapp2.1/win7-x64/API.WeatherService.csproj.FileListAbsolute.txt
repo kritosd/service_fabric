@@ -1,0 +1,17 @@
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\hostpolicy.dll
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\hostfxr.dll
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.exe
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.deps.json
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.runtimeconfig.json
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.runtimeconfig.dev.json
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.dll
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.csprojAssemblyReference.cache
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.csproj.CoreCompileInputs.cache
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.RazorAssemblyInfo.cache
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.RazorAssemblyInfo.cs
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.AssemblyInfoInputs.cache
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.AssemblyInfo.cs
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.RazorTargetAssemblyInfo.cache
+D:\sw\App\API.WeatherService\bin\Debug\netcoreapp2.1\win7-x64\API.WeatherService.pdb
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.dll
+D:\sw\App\API.WeatherService\obj\Debug\netcoreapp2.1\win7-x64\API.WeatherService.pdb

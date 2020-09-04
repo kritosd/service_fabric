@@ -1,0 +1,58 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/data",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/data",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ServiceName": "App/StoreService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/data/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/data/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ServiceName": "App/StoreService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailactivity",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/email",
+      "ServiceName": "App/EmailService.API"
+    },
+    {
+      "DownstreamPathTemplate": "/api/weatherdata/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/weather/{everything}",
+      "ServiceName": "App/API.WeatherService"
+    },/*
+    {
+      "DownstreamPathTemplate": "/rest/engine/default/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/engine/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ServiceName": "App/Camunda"
+    },
+    {
+      "DownstreamPathTemplate": "/app/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/app/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ServiceName": "App/Camunda"
+    },*/
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/camunda/{everything}",
+      "ServiceName": "App/Camunda"
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 19081,
+      "Type": "ServiceFabric"
+    }
+  }
+}

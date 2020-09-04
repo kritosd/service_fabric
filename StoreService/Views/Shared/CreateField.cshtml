@@ -1,0 +1,30 @@
+﻿@model tableStructure
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>Create Field</legend>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input class="btn btn-default" type="hidden" id="field_id" name="field_id" value="@Url.ActionContext.RouteData.Values["id"]" />
+        </div>
+        <div class="control-label col-md-2">
+        </div>
+        <div class="col-md-10">
+            <input class="btn btn-default" type="text" id="field_name" name="field_name" value="" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+
+</fieldset>
+}

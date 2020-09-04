@@ -1,0 +1,1 @@
+{"ExePath":"D:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\Packages\\Debugger\\VsDebugLaunchNotify.exe","Arguments":" {8689e0cb-b220-4eb0-95eb-1b567524735c} -p [ProcessId] -tid [ThreadId]"}
