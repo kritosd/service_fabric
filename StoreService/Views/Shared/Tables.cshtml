@@ -12,31 +12,25 @@
 </p>
 @foreach (tableStructure table in Model)
 {
-    <h3>
-        @Html.DisplayFor(modelItem => table.id)
-    </h3>
+<h3>
+    @Html.DisplayFor(modelItem => table.id)
+    @Html.DisplayFor(modelItem => table.name)
+</h3>
     @Html.ActionLink("Edit", "Table", new { id = table.id })
     <table class="table">
         <thead>
-            @foreach (var row in table.rows)
+            @foreach (var field in table.fields)
             {
-                <tr>
-                    @foreach (var r in row)
-                    {
-                        <th>
-                            @Html.DisplayFor(modelItem => r.Key)
-                        </th>
-                    }
-                    <th></th>
-                </tr>
-                break;
+                <th>
+                    @Html.DisplayFor(modelItem => field.name)
+                </th>
             }
         </thead>
         <tbody>
             @foreach (var row in table.rows)
             {
                 <tr>
-                    @foreach (var r in row)
+                    @foreach (var r in row) // key: quantity value: 5
                     {
                         <td>
                             @Html.DisplayFor(modelItem => r.Value)

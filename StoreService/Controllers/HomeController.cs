@@ -10,11 +10,6 @@ namespace StoreService.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public IActionResult Tables()
         {
             DataStoreContext context = HttpContext.RequestServices.GetService(typeof(DataStoreContext)) as DataStoreContext;
@@ -33,43 +28,48 @@ namespace StoreService.Controllers
 
             return View(Table);
         }
+
         [HttpPost]
-        public IActionResult Table(string id, List<string> fields)
+        public IActionResult Table(string id, string name, List<field> fields)
         {
             DataStoreContext context = HttpContext.RequestServices.GetService(typeof(DataStoreContext)) as DataStoreContext;
-
+            context.UpdateTableName(id, name);
             foreach (var field in fields)
             {
-                context.UpdateField(id, field);
+                context.UpdateField(field.id, field.name);
             }
 
             return Redirect("/home/tables");
         }
+
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Create(string table_name)
         {
             //string table_name = Request.Form["table_name"];
             DataStoreContext context = HttpContext.RequestServices.GetService(typeof(DataStoreContext)) as DataStoreContext;
             string table_id = context.InsertIntoTables(table_name);
-            return Redirect($"/home/table/{table_id}/createfield");
+            return Redirect($"/home/table/createfield/{table_id}");
         }
-        [HttpGet("/home/table/{table_id}/createfield")]
+
+        [HttpGet]
         public IActionResult CreateField(string table_id)
         {
             return View();
         }
-        [HttpPost("/home/table/{table_id}/createfield")]
+
+        [HttpPost("/home/table/createfield/{table_id}")]
         public IActionResult CreateField(string table_id, string field_name)
         {
             //string field_name = Request.Form["field_name"];
             DataStoreContext context = HttpContext.RequestServices.GetService(typeof(DataStoreContext)) as DataStoreContext;
             context.InsertIntoFields(table_id, field_name);
-            return View("/home/fields");
+            return Redirect($"/home/table/{table_id}");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

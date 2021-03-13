@@ -16,7 +16,7 @@ using DarkSkyApi.Models;
 namespace CamundaService.Worker
 {
     [ExternalTaskTopic("WeatherService")]
-    [ExternalTaskVariableRequirements("latitude", "longitude")]
+    [ExternalTaskVariableRequirements("Action", "latitude", "longitude")]
     class WeatherAdapter : IExternalTaskAdapter
     {
         private static HttpClient _httpClient = new HttpClient();

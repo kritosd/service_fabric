@@ -64,7 +64,7 @@ using StoreService.Models;
             WriteLiteral("\r\n<h2>Data</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(150, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc926383c1bb4193bd014d30f42ed887", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "498288f7ef254277b9a2358a98689168", async() => {
                 BeginContext(173, 10, true);
                 WriteLiteral("Create New");
                 EndContext();

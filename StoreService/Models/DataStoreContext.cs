@@ -173,9 +173,30 @@ namespace StoreService.Models
             return new tableStructure()
             {
                 id = table_id,
+                name = getTableName(table_id),
                 rows = getData(table_id),
                 fields = getFieldsData(table_id)
             };
+        }
+        public string getTableName(string table_id)
+        {
+            string name = "";
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                MySqlCommand comm = conn.CreateCommand();
+                string SQL = "SELECT * FROM tables WHERE table_id='" + table_id + "';";
+                MySqlCommand cmd = new MySqlCommand(SQL, conn);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["table_name"].ToString();
+                    }
+                }
+                conn.Close();
+            }
+            return name;
         }
         public List<tableTable> getTableData()
         {
@@ -227,9 +248,9 @@ namespace StoreService.Models
 
             return d;
         }
-        public List<string> getFieldsData(string table_id)
+        public List<field> getFieldsData(string table_id)
         {
-            List<string> fields_name = new List<string>();
+            List<field> field = new List<field>();
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -242,12 +263,18 @@ namespace StoreService.Models
                     while (reader.Read())
                     {
                         //table_id = reader["table_id"].ToString();
-                        fields_name.Add(reader["field_name"].ToString());
+                        //fields_name.Add(reader["field_name"].ToString());
+                        field.Add( new field()
+                            {
+                                id = reader["field_id"].ToString(),
+                                name = reader["field_name"].ToString()
+                            }
+                        );
                     }
                 }
                 conn.Close();
             }
-            return fields_name;
+            return field;
         }
         public void InsertData(string table_name, string table_id, string data)
         {
@@ -359,7 +386,25 @@ namespace StoreService.Models
                 MySqlCommand comm = conn.CreateCommand();
                 try
                 {
-                    comm.CommandText = "UPDATE field SET field_name = " + field_name + "WHERE field_id = '" + field_id + "';";
+                    comm.CommandText = "UPDATE fields SET field_name = '" + field_name + "' WHERE field_id = '" + field_id + "';";
+                    int rowsEffected = comm.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Caught exception: " + ex.Message);
+                }
+                conn.Close();
+            }
+        }
+        public void UpdateTableName(string table_id, string table_name)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                MySqlCommand comm = conn.CreateCommand();
+                try
+                {
+                    comm.CommandText = "UPDATE tables SET table_name = '" + table_name + "' WHERE table_id = '" + table_id + "';";
                     int rowsEffected = comm.ExecuteNonQuery();
                 }
                 catch (Exception ex)

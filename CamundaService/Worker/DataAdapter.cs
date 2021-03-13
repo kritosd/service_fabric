@@ -16,7 +16,7 @@ using StoreService.Models;
 namespace CamundaService.Worker
 {
     [ExternalTaskTopic("DataService",1,30)]
-    [ExternalTaskVariableRequirements("request", "Action", "Table", "PrimaryKey", "Data")]
+    [ExternalTaskVariableRequirements("Action", "Table", "PrimaryKey", "Data")]
     class DataAdapter : IExternalTaskAdapter
     {
         private HttpContent content;

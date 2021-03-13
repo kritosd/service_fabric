@@ -63,10 +63,16 @@ namespace StoreService.Models
     public class tableStructure
     {
         public string id { get; set; }
+        public string name { get; set; }
         public List<IDictionary<string, string>> rows { get; set; }
-        public List<string> fields { get; set; }
+        public List<field> fields { get; set; }
     }
 
+    public class field
+    {
+        public string id { get; set; }
+        public string name { get; set; }
+    }
     public class row
     {
         public string field { get; set; }

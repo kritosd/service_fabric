@@ -1,6 +1,13 @@
 {
   "ReRoutes": [
     {
+      "DownstreamPathTemplate": "/home/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/home2/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ServiceName": "App/StoreService"
+    },
+    {
       "DownstreamPathTemplate": "/api/data",
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/data",
@@ -25,7 +32,7 @@
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/weather/{everything}",
       "ServiceName": "App/API.WeatherService"
-    },/*
+    }, /*
     {
       "DownstreamPathTemplate": "/rest/engine/default/{everything}",
       "DownstreamScheme": "http",
